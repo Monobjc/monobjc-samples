@@ -1,0 +1,9 @@
+Quartz Composer slideshow example
+
+version 1.1 (initial release)
+-----------------------------
+added "press ESC to quit" hint to the composition
+added transition loop
+
+under Mac OS X v10.5 not test yet
+under Mac OS X v10.6 working perfectly without issues

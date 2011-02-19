@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51F65314-7749-4E46-A2E4-9D4345505166}</ProjectGuid>
+    <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monobjc.Samples.AppList</RootNamespace>
+    <AssemblyName>AppList</AssemblyName>
+    <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
+    <MacOSVersion>MacOS106</MacOSVersion>
+    <MacOSArch>X86</MacOSArch>
+    <EmbedMachineConfig>false</EmbedMachineConfig>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <BundleIcon>Monobjc.icns</BundleIcon>
+    <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
+    <SigningIdentity />
+    <ArchiveIdentity />
+    <Archive>false</Archive>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="Monobjc, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.AppKit, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.Foundation, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppController.cs" />
+    <Compile Include="ExecutableArchitectureTransformer.cs" />
+    <Compile Include="NSRunningApplication_BooleanPropertiesAsStrings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppController.designer.cs">
+      <DependentUpon>AppController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BooleanTransformer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="English.lproj\Credits.rtf" />
+    <None Include="English.lproj\InfoPlist.strings" />
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="Monobjc.icns" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="English.lproj\MainMenu.xib" />
+  </ItemGroup>
+</Project>

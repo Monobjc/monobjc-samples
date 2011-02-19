@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E67425E7-3656-4FCF-966C-8088DC84A4FF}</ProjectGuid>
+    <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Monobjc.Samples.WhereIsMyMac</RootNamespace>
+    <AssemblyName>WhereIsMyMac</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MacOSFrameworks>AppKit;CoreLocation;Foundation;WebKit</MacOSFrameworks>
+    <MacOSVersion>MacOS106</MacOSVersion>
+    <MacOSArch>X86</MacOSArch>
+    <EmbedMachineConfig>true</EmbedMachineConfig>
+    <BundleIcon>Monobjc.icns</BundleIcon>
+    <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
+    <Archive>false</Archive>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Monobjc, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.AppKit, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.CoreLocation, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.Foundation, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.WebKit, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhereIsMyMacAppDelegate.cs" />
+    <Compile Include="WhereIsMyMacAppDelegate.designer.cs">
+      <DependentUpon>WhereIsMyMacAppDelegate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTMLFormatString.html" />
+    <Content Include="Monobjc.icns" />
+    <Content Include="English.lproj\InfoPlist.strings" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Page Include="English.lproj\MainMenu.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+</Project>

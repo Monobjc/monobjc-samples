@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33408004-5D18-4F47-A853-438AD08235A2}</ProjectGuid>
+    <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Monobjc.Samples.QuartzComposerChart</RootNamespace>
+    <AssemblyName>QuartzComposerChart</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MacOSFrameworks>AppKit;Foundation;Quartz</MacOSFrameworks>
+    <MacOSVersion>MacOS106</MacOSVersion>
+    <MacOSArch>X86</MacOSArch>
+    <EmbedMachineConfig>true</EmbedMachineConfig>
+    <BundleIcon>Monobjc.icns</BundleIcon>
+    <Archive>false</Archive>
+    <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Monobjc, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.AppKit, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.Foundation, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+    <Reference Include="Monobjc.Quartz, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.6</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="AppController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppController.designer.cs">
+      <DependentUpon>AppController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Monobjc.icns" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Page Include="English.lproj\MainMenu.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chart.qtz" />
+    <Content Include="English.lproj\InfoPlist.strings" />
+  </ItemGroup>
+</Project>

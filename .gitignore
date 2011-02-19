@@ -1,0 +1,11 @@
+bin/
+build/
+dist/
+obj/
+_ReSharper*
+*.Cache
+*.pidb
+*.resources
+*.suo
+*.user
+*.userprefs

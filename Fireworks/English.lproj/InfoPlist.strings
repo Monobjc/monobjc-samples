@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleGetInfoString = "Fireworks, Copyright 2007-2011 Monobjc Project.";
+NSHumanReadableCopyright = "Copyright 2007-2011 Monobjc Project.";
