@@ -26,11 +26,11 @@ namespace Monobjc.Samples.ContentBurn
         {
             // Gets the DRBurn icon and assign it another name
             NSImage icon = NSImage.ImageNamed(DiscRecordingUIFramework.DRBurnIcon);
-            icon.Name = "OldDRBurnIcon";
+            icon.SetName("OldDRBurnIcon");
 
             // Gets the Monobjc icon and assign it as default icon
             icon = new NSImage(NSBundle.MainBundle.PathForImageResource("Monobjc.icns"));
-            icon.Name = DiscRecordingUIFramework.DRBurnIcon;
+            icon.SetName(DiscRecordingUIFramework.DRBurnIcon);
         }
 
         public NSArray SelectAudioFiles()

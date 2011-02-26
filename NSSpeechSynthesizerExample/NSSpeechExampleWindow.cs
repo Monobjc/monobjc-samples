@@ -118,11 +118,11 @@ namespace Monobjc.Samples.NSSpeechSynthesizerExample
                 if (this._voicePop.IndexOfSelectedItem == 0)
                 {
                     // Pass NULL as the voice to use the system voice.
-                    this._speechSynthesizer.Voice = null;
+                    this._speechSynthesizer.SetVoice(null);
                 }
                 else
                 {
-                    this._speechSynthesizer.Voice = NSSpeechSynthesizer.AvailableVoices.ObjectAtIndex((uint) this._voicePop.IndexOfSelectedItem - kNumOfFixedMenuItemsInVoicePopup).CastTo<NSString>();
+                    this._speechSynthesizer.SetVoice(NSSpeechSynthesizer.AvailableVoices.ObjectAtIndex((uint) this._voicePop.IndexOfSelectedItem - kNumOfFixedMenuItemsInVoicePopup).CastTo<NSString>());
                 }
 
                 if (url != null)

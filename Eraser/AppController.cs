@@ -31,11 +31,11 @@ namespace Monobjc.Samples.Eraser
         {
             // Gets the DRErase icon and assign it another name
             NSImage icon = NSImage.ImageNamed(DiscRecordingUIFramework.DREraseIcon);
-            icon.Name = "OldDREraseIcon";
+            icon.SetName("OldDREraseIcon");
 
             // Gets the Monobjc icon and assign it as default icon
             icon = new NSImage(NSBundle.MainBundle.PathForImageResource("Monobjc.icns"));
-            icon.Name = DiscRecordingUIFramework.DREraseIcon;
+            icon.SetName(DiscRecordingUIFramework.DREraseIcon);
 
             NSNotificationCenter.DefaultCenter.AddObserverSelectorNameObject(this,
                                                                              ObjectiveCRuntime.Selector("eraseCompleted:"),

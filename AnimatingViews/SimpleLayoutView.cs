@@ -55,6 +55,10 @@ namespace Monobjc.Samples.AnimatingViews
 
         partial void RemoveLastBox(Id sender)
         {
+			if (this.Subviews.Count == 0)
+			{
+				return;
+			}
             this.Subviews.LastObject.CastTo<NSView>().RemoveFromSuperview();
             this.Layout();
         }
