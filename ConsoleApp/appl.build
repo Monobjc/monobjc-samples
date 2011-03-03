@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="Monobjc Application" default="build" basedir=".">
+  <description>Monobjc Application Build File</description>
+
+  <property name="app.name" value="ConsoleApp" overwrite="false"/>
+
+  <!-- ===============================================================================
+  Build the application
+  ================================================================================ -->
+  <target name="build" description="Build the application">
+
+    <!-- Compile source files -->
+    <csc target="exe" output="${app.name}.exe">
+      <sources>
+        <include name="**/*.cs"/>
+      </sources>
+      <references>
+        <include name="System.dll"/>
+        <include name="System.Core.dll"/>
+      </references>
+      <pkg-references>
+        <package name="monobjc-10.6"/>
+      </pkg-references>
+    </csc>
+
+  </target>
+
+</project>

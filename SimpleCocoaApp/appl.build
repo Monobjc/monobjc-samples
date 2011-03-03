@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<project name="Monobjc Application" default="build" basedir=".">
+  <description>Monobjc Application Build File</description>
+
+  <property name="build.dir" value="build" overwrite="false"/>
+  <property name="dist.dir" value="dist" overwrite="false"/>
+  <property name="app.name" value="SimpleCocoaApp" overwrite="false"/>
+
+  <!-- ===============================================================================
+  Remove all the generated files
+  ================================================================================ -->
+  <target name="clean" description="Remove all the generated files">
+    <!-- Delete folders -->
+    <delete dir="${build.dir}" failonerror="false" />
+    <delete dir="${dist.dir}" failonerror="false" />
+  </target>
+
+  <!-- ===============================================================================
+  Prepare the build
+  ================================================================================ -->
+  <target name="prepare" description="Prepare the build">
+    <!-- Create folders -->
+    <mkdir dir="${build.dir}" failonerror="false" />
+    <mkdir dir="${dist.dir}" failonerror="false" />
+  </target>
+
+  <!-- ===============================================================================
+  Build the application
+  ================================================================================ -->
+  <target name="build" description="Build the application" depends="prepare">
+
+    <!-- Compile source files -->
+    <csc target="exe" output="${build.dir}/${app.name}.exe">
+      <sources>
+        <include name="**/*.cs"/>
+      </sources>
+      <references>
+        <include name="System.dll"/>
+        <include name="System.Core.dll"/>
+      </references>
+      <pkg-references>
+        <package name="monobjc-10.5"/>
+      </pkg-references>
+    </csc>
+
+    <!-- Compile the XIB file to a NIB file -->
+    <compile-xib xibfile="English.lproj/MainMenu.xib" todir="${build.dir}/English.lproj"/>
+
+    <!-- Generate the Info.plist -->
+    <gen-plist assembly="${build.dir}/${app.name}.exe" icon="Monobjc" todir="${build.dir}"/>
+
+    <!-- Create the application bundle -->
+    <bundle-app name="${app.name}"
+                target-os="MacOS105"
+                plist="${build.dir}/Info.plist"
+                native="false"
+                todir="${dist.dir}">
+      <!-- Copy icon -->
+      <copy-in-resources basedir=".">
+        <include name="Monobjc.icns"/>
+      </copy-in-resources>
+      
+      <!-- Copy resources -->
+      <copy-in-resources basedir="${build.dir}">
+        <include name="${app.name}.exe"/>
+        <include name="*.lproj/**"/>
+      </copy-in-resources>
+    </bundle-app>
+
+  </target>
+
+  <!-- ===============================================================================
+  Build the native application
+  ================================================================================ -->
+  <target name="native" description="Build the application" depends="prepare">
+
+    <!-- Compile source files -->
+    <csc target="exe" output="${build.dir}/${app.name}.exe">
+      <sources>
+        <include name="**/*.cs"/>
+      </sources>
+      <references>
+        <include name="System.dll"/>
+        <include name="System.Core.dll"/>
+      </references>
+      <pkg-references>
+        <package name="monobjc-10.5"/>
+      </pkg-references>
+    </csc>
+
+    <!-- Compile the XIB file to a NIB file -->
+    <compile-xib xibfile="English.lproj/MainMenu.xib" todir="${build.dir}/English.lproj"/>
+
+    <!-- Generate the Info.plist -->
+    <gen-plist assembly="${build.dir}/${app.name}.exe" icon="Monobjc" todir="${build.dir}"/>
+
+    <!-- Generate a native binary that embeds everything -->
+    <embed-app name="${app.name}"
+        assembly="${build.dir}/${app.name}.exe"
+        todir="${build.dir}"
+        target-os="MacOS105"
+        target-architecture="X86"
+        machine-configuration="/Library/Frameworks/Mono.framework/Home/etc/mono/2.0/machine.config">
+      <search-in basedir="${pkg-config::get-variable('monobjc-10.5', 'pkglibdir')}"/>
+    </embed-app>
+
+    <!-- Create the application bundle -->
+    <bundle-app name="${app.name}"
+                target-os="MacOS105"
+                plist="${build.dir}/Info.plist"
+                native="true"
+                todir="${dist.dir}">
+      <!-- Copy binaries -->
+      <copy-in-macos basedir="${build.dir}">
+        <include name="${app.name}"/>
+        <include name="*.dylib"/>
+      </copy-in-macos>
+      
+      <!-- Copy icon -->
+      <copy-in-resources basedir=".">
+        <include name="Monobjc.icns"/>
+      </copy-in-resources>
+      
+      <!-- Copy resources -->
+      <copy-in-resources basedir="${build.dir}">
+        <include name="*.lproj/**"/>
+      </copy-in-resources>
+    </bundle-app>
+
+  </target>
+
+  <!-- ===============================================================================
+  Sign and package the native application
+  ================================================================================ -->
+  <target name="sign" description="Build the application" depends="prepare">
+	<codesign bundle="${dist.dir}/${app.name}.app">
+		<identity><![CDATA[3rd Party Mac Developer Application: Laurent Etiemble"]]></identity>
+	</codesign>
+	<product-build bundle="${dist.dir}/${app.name}.app">
+		<identity><![CDATA[3rd Party Mac Developer Installer: Laurent Etiemble"]]></identity>
+	</product-build>
+  </target>
+
+</project>
