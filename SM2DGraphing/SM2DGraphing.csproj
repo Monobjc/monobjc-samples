@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{218EA7D2-DDF6-4956-9981-3553EFB6E3CF}</ProjectGuid>
+    <ProjectGuid>{BA8D26CE-28E6-4D0B-AEF9-715EFE6119C9}</ProjectGuid>
     <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Monobjc.Samples.NSSpeechSynthesizerExample</RootNamespace>
-    <AssemblyName>NSSpeechSynthesizerExample</AssemblyName>
-    <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
-    <MacOSVersion>MacOS105</MacOSVersion>
-    <MacOSArch>X86</MacOSArch>
-    <EmbedMachineConfig>true</EmbedMachineConfig>
+    <RootNamespace>Monobjc.Samples.SM2DGraphing</RootNamespace>
+    <AssemblyName>SM2DGraphing</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <BundleIcon>Monobjc.icns</BundleIcon>
-    <SigningIdentity />
-    <ArchiveIdentity />
-    <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
+    <MacOSFrameworks>AppKit;Foundation;SM2DGraphView</MacOSFrameworks>
+    <MacOSVersion>MacOS105</MacOSVersion>
+    <MacOSArch>None</MacOSArch>
     <Archive>false</Archive>
+    <BundleIcon>Monobjc.icns</BundleIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,48 +37,42 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.AppKit, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.5</Package>
+    </Reference>
+    <Reference Include="Monobjc.SM2DGraphView, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NSSpeechExampleWindow.cs" />
+    <Compile Include="SM2DGraphAppDelegate.SMPieChartView.Delegate.cs" />
+    <Compile Include="SM2DGraphAppDelegate.SMPieChartView.DataSource.cs" />
+    <Compile Include="SM2DGraphAppDelegate.SM2DGraphView.Delegate.cs" />
+    <Compile Include="SM2DGraphAppDelegate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpeakingCharacterView.cs" />
-    <Compile Include="NSSpeechExampleWindow.designer.cs">
-      <DependentUpon>NSSpeechExampleWindow.cs</DependentUpon>
-    </Compile>
+    <Compile Include="SM2DGraphAppDelegate.SM2DGraphView.DataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="Monobjc.icns" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Monobjc.icns" />
-    <Content Include="BusterClosed.tif" />
-    <Content Include="BusterIdle1.tif" />
-    <Content Include="BusterIdle2.tif" />
-    <Content Include="BusterIdle3.tif" />
-    <Content Include="BusterIdle4.tif" />
-    <Content Include="BusterOpen.tif" />
-    <Content Include="BusterSleep.tif" />
-    <Content Include="Buster.plist" />
-    <Content Include="English.lproj\InfoPlist.strings" />
-    <Content Include="English.lproj\Localizable.strings" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -91,11 +81,17 @@
   </Target>
   -->
   <ItemGroup>
-    <Page Include="English.lproj\MainMenu.xib" />
+    <Content Include="English.lproj\GraphingAppMain.nib\classes.nib">
+    </Content>
+    <Content Include="English.lproj\GraphingAppMain.nib\data.dependency">
+    </Content>
+    <Content Include="English.lproj\GraphingAppMain.nib\info.nib">
+    </Content>
+    <Content Include="English.lproj\GraphingAppMain.nib\objects.nib">
+    </Content>
+    <Content Include="English.lproj\Credits.rtf">
+    </Content>
+    <Content Include="English.lproj\InfoPlist.strings">
+    </Content>
   </ItemGroup>
-  <ProjectExtensions>
-    <MonoDevelop>
-      <Properties InternalTargetFrameworkVersion="4.0" />
-    </MonoDevelop>
-  </ProjectExtensions>
 </Project>
