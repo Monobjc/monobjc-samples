@@ -42,19 +42,19 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.5.1354.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.AppKit, Version=10.5.1354.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.5.1354.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.SM2DGraphView, Version=10.5.1352.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.SM2DGraphView, Version=10.5.1354.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
@@ -69,8 +69,8 @@
     <Compile Include="SM2DGraphAppDelegate.SM2DGraphView.DataSource.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Info.plist" />
     <None Include="Monobjc.icns" />
+    <None Include="Info.plist" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
