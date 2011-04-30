@@ -8,7 +8,7 @@ namespace Monobjc.Samples.PDFKitViewer
     [ObjectiveCClass]
     public partial class MyPDFDocument : NSDocument
     {
-        private static readonly Class MyPDFDocumentClass = Class.GetClassFromType(typeof (MyPDFDocument));
+        private static readonly Class MyPDFDocumentClass = Class.Get(typeof (MyPDFDocument));
 
         private PDFOutline _outline;
         private NSMutableArray _searchResults;

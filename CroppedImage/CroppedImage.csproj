@@ -15,7 +15,7 @@
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
     <Archive>false</Archive>
@@ -42,15 +42,15 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.AppKit, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC9627D2-F439-4B0A-B204-B14278EEE13D}</ProjectGuid>
+    <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Monobjc.Samples.DatePlot</RootNamespace>
+    <MacOSArch>X86</MacOSArch>
+    <Archive>false</Archive>
+    <MacOSFrameworks>AppKit;CorePlot;Foundation</MacOSFrameworks>
+    <MacOSVersion>MacOS105</MacOSVersion>
+    <AssemblyName>DatePlot</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Monobjc, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.5</Package>
+    </Reference>
+    <Reference Include="Monobjc.AppKit, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.5</Package>
+    </Reference>
+    <Reference Include="Monobjc.CorePlot, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.5</Package>
+    </Reference>
+    <Reference Include="Monobjc.Foundation, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>monobjc-10.5</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Controller.designer.cs">
+      <DependentUpon>Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="en.lproj\MainMenu.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
