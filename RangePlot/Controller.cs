@@ -122,12 +122,12 @@ namespace Monobjc.Samples.RangePlot
 				double rRight = (rand.Next () / (double)Int32.MaxValue * 0.125 + 0.125) * oneDay;
 				
 				newData.AddObject (NSDictionary.DictionaryWithObjectsAndKeys (
-				                                                              NSDecimalNumber.NumberWithDouble (xx), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldX), 
-				                                                              NSDecimalNumber.NumberWithDouble (yy), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldY),
-				                                                              NSDecimalNumber.NumberWithDouble (rHigh), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldHigh), 
-				                                                              NSDecimalNumber.NumberWithDouble (rLow), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldLow), 
-				                                                              NSDecimalNumber.NumberWithDouble (rLeft), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldLeft),
-				                                                              NSDecimalNumber.NumberWithDouble (rRight), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldRight), 
+				                                                              NSDecimalNumber.NumberWithDouble (xx), CPRangePlot.FieldX, 
+				                                                              NSDecimalNumber.NumberWithDouble (yy), CPRangePlot.FieldY,
+				                                                              NSDecimalNumber.NumberWithDouble (rHigh), CPRangePlot.FieldHigh, 
+				                                                              NSDecimalNumber.NumberWithDouble (rLow), CPRangePlot.FieldLow, 
+				                                                              NSDecimalNumber.NumberWithDouble (rLeft), CPRangePlot.FieldLeft,
+				                                                              NSDecimalNumber.NumberWithDouble (rRight), CPRangePlot.FieldRight, 
 				                                                              null));
 			}
 			

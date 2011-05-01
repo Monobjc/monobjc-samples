@@ -94,8 +94,8 @@ namespace Monobjc.Samples.DatePlot
 				double yy = 3.0 * rand.Next () / (double)Int32.MaxValue + 1.2;
 
 				newData.AddObject (NSDictionary.DictionaryWithObjectsAndKeys (
-				                                                              NSDecimalNumber.NumberWithDouble (xx), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldX), 
-				                                                              NSDecimalNumber.NumberWithDouble (yy), NSNumber.NumberWithInt ((int)CPRangePlotField.CPRangePlotFieldY),
+				                                                              NSDecimalNumber.NumberWithDouble (xx), CPScatterPlot.FieldX, 
+				                                                              NSDecimalNumber.NumberWithDouble (yy), CPScatterPlot.FieldY,
 				                                                              null));
 			}
 			

@@ -39,19 +39,19 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.AppKit, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.CorePlot, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.CorePlot, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1399.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.5</Package>
     </Reference>
