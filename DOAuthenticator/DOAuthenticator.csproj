@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F429F42B-8861-465A-8266-FD66C03E0375}</ProjectGuid>
+    <ProjectGuid>{036973FA-73CE-46A3-B2D6-35C2DBF9AB52}</ProjectGuid>
     <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SBSetFinderComment</RootNamespace>
+    <RootNamespace>Monobjc.Samples.DOAuthenticator</RootNamespace>
     <MacOSArch>X86</MacOSArch>
     <Archive>false</Archive>
-    <MacOSFrameworks>AppKit;Foundation;ScriptingBridge</MacOSFrameworks>
-    <MacOSVersion>MacOS105</MacOSVersion>
-    <AssemblyName>SBSetFinderComment</AssemblyName>
+    <MacOSFrameworks>Foundation</MacOSFrameworks>
+    <MacOSVersion>MacOS106</MacOSVersion>
+    <AssemblyName>Authenticator</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
+    <MacOSApplicationType>ConsoleApplication</MacOSApplicationType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,36 +39,21 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.6.1416.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
+      <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.6.1416.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
+      <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
-    </Reference>
-    <Reference Include="Monobjc.ScriptingBridge, Version=10.5.1400.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="en.lproj\MainMenu.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="Controller.designer.cs">
-      <DependentUpon>Controller.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controller.cs" />
-    <Compile Include="Finder.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Info.plist" />
+    <Compile Include="Authenticator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="appl.build" />
+  </ItemGroup>
 </Project>
