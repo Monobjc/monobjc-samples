@@ -17,6 +17,7 @@
     <MacOSArch>None</MacOSArch>
     <Archive>false</Archive>
     <BundleIcon>Monobjc.icns</BundleIcon>
+    <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

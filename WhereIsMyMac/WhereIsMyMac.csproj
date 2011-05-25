@@ -19,6 +19,7 @@
     <BundleIcon>Monobjc.icns</BundleIcon>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
     <Archive>false</Archive>
+    <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

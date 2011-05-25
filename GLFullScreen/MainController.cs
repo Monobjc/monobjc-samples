@@ -50,20 +50,20 @@ namespace GLFullScreen
 			// Create a screen-sized window on the display you want to take over
 			// Note, mainDisplayRect has a non-zero origin if the key window is on a secondary display
 			mainDisplayRect = NSScreen.MainScreen.Frame;
-			fullScreenWindow = new NSWindow (mainDisplayRect, NSWindowStyleMask.NSBorderlessWindowMask, NSBackingStoreType.NSBackingStoreBuffered, true);
+			this.fullScreenWindow = new NSWindow (mainDisplayRect, NSWindowStyleMask.NSBorderlessWindowMask, NSBackingStoreType.NSBackingStoreBuffered, true);
 			
 			// Set the window level to be above the menu bar
-			//[fullScreenWindow setLevel:NSMainMenuWindowLevel+1];
+			this.fullScreenWindow.Level = NSWindow.NSMainMenuWindowLevel + 1;
 			
 			// Perform any other window configuration you desire
-			fullScreenWindow.IsOpaque = true;
-			fullScreenWindow.HidesOnDeactivate = true;
+			this.fullScreenWindow.IsOpaque = true;
+			this.fullScreenWindow.HidesOnDeactivate = true;
 			
 			// Create a view with a double-buffered OpenGL context and attach it to the window
 			// By specifying the non-fullscreen context as the shareContext, we automatically inherit the OpenGL objects (textures, etc) it has defined
 			viewRect = new NSRect (0, 0, mainDisplayRect.size.width, mainDisplayRect.size.height);
 			this.fullScreenView = new MyOpenGLView (viewRect, this.openGLView.OpenGLContext);
-			this.fullScreenWindow.ContentView = fullScreenView;
+			this.fullScreenWindow.ContentView = this.fullScreenView;
 			
 			// Set the scene with the full-screen viewport and viewing transformation
 			this.scene.SetViewportRect (viewRect);

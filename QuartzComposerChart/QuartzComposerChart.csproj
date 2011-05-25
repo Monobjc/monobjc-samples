@@ -18,6 +18,7 @@
     <BundleIcon>Monobjc.icns</BundleIcon>
     <Archive>false</Archive>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
+    <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
