@@ -14,10 +14,10 @@ namespace Monobjc.Samples.RangePlot
 		
 		public static readonly NSString PLOT_IDENTIFIER = new NSString("Range Plot");
 
-		private CPXYGraph graph;
+		private CPTXYGraph graph;
 		private NSArray plotData;
-		private CPFill areaFill;
-		private CPLineStyle barLineStyle;
+		private CPTFill areaFill;
+		private CPTLineStyle barLineStyle;
 
 		public Controller ()
 		{
@@ -47,14 +47,14 @@ namespace Monobjc.Samples.RangePlot
 			double oneDay = 24 * 60 * 60;
 			
 			// Create graph from theme
-			graph = new CPXYGraph (CGRect.CGRectZero);
-			CPTheme theme = CPTheme.ThemeNamed (CPTheme.kCPDarkGradientTheme);
+			graph = new CPTXYGraph (CGRect.CGRectZero);
+			CPTTheme theme = CPTTheme.ThemeNamed (CPTTheme.kCPTDarkGradientTheme);
 			graph.ApplyTheme (theme);
 			hostView.HostedLayer = graph;
 			
 			// Title
-			CPMutableTextStyle textStyle = CPMutableTextStyle.TextStyle;
-			textStyle.Color = CPColor.WhiteColor;
+			CPTMutableTextStyle textStyle = CPTMutableTextStyle.TextStyle;
+			textStyle.Color = CPTColor.WhiteColor;
 			textStyle.FontSize = 18.0;
 			textStyle.FontName = "Helvetica";
 			graph.Title = "Click to Toggle Range Plot Style";
@@ -62,37 +62,37 @@ namespace Monobjc.Samples.RangePlot
 			graph.TitleDisplacement = new CGPoint (0.0f, -20.0f);
 			
 			// Setup scatter plot space
-			CPXYPlotSpace plotSpace = graph.DefaultPlotSpace.CastTo<CPXYPlotSpace> ();
+			CPTXYPlotSpace plotSpace = graph.DefaultPlotSpace.CastTo<CPTXYPlotSpace> ();
 			double xLow = oneDay * 0.5;
-			plotSpace.XRange = CPPlotRange.PlotRangeWithLocationLength (NSDecimal.FromDouble (xLow), NSDecimal.FromDouble (oneDay * 5.0));
-			plotSpace.YRange = CPPlotRange.PlotRangeWithLocationLength (NSDecimal.FromDouble (1.0), NSDecimal.FromDouble (3.0));
+			plotSpace.XRange = CPTPlotRange.PlotRangeWithLocationLength (NSDecimal.FromDouble (xLow), NSDecimal.FromDouble (oneDay * 5.0));
+			plotSpace.YRange = CPTPlotRange.PlotRangeWithLocationLength (NSDecimal.FromDouble (1.0), NSDecimal.FromDouble (3.0));
 			
 			// Axes
-			CPXYAxisSet axisSet = graph.AxisSet.CastTo<CPXYAxisSet> ();
-			CPXYAxis x = axisSet.XAxis;
+			CPTXYAxisSet axisSet = graph.AxisSet.CastTo<CPTXYAxisSet> ();
+			CPTXYAxis x = axisSet.XAxis;
 			x.MajorIntervalLength = NSDecimal.FromDouble (oneDay);
 			x.OrthogonalCoordinateDecimal = NSDecimal.FromString ("2");
 			x.MinorTicksPerInterval = 0;
 			NSDateFormatter dateFormatter = new NSDateFormatter ().Autorelease<NSDateFormatter> ();
 			dateFormatter.DateStyle = NSDateFormatterStyle.NSDateFormatterShortStyle;
-			CPTimeFormatter timeFormatter = new CPTimeFormatter (dateFormatter).Autorelease<CPTimeFormatter> ();
+			CPTTimeFormatter timeFormatter = new CPTTimeFormatter (dateFormatter).Autorelease<CPTTimeFormatter> ();
 			timeFormatter.ReferenceDate = refDate;
 			x.LabelFormatter = timeFormatter;
 			
-			CPXYAxis y = axisSet.YAxis;
+			CPTXYAxis y = axisSet.YAxis;
 			y.MajorIntervalLength = NSDecimal.FromString (@"0.5");
 			y.MinorTicksPerInterval = 5;
 			y.OrthogonalCoordinateDecimal = NSDecimal.FromDouble (oneDay);
 			
 			// Create a plot that uses the data source method
-			CPRangePlot dataSourceLinePlot = new CPRangePlot ().Autorelease<CPRangePlot> ();
+			CPTRangePlot dataSourceLinePlot = new CPTRangePlot ().Autorelease<CPTRangePlot> ();
 			dataSourceLinePlot.Identifier = PLOT_IDENTIFIER;
 			
 			// Add line style
-			CPMutableLineStyle lineStyle = CPMutableLineStyle.LineStyle;
+			CPTMutableLineStyle lineStyle = CPTMutableLineStyle.LineStyle;
 			lineStyle.LineWidth = 1.0;
-			lineStyle.LineColor = CPColor.GreenColor;
-			barLineStyle = lineStyle.Retain<CPLineStyle> ();
+			lineStyle.LineColor = CPTColor.GreenColor;
+			barLineStyle = lineStyle.Retain<CPTLineStyle> ();
 			dataSourceLinePlot.BarLineStyle = barLineStyle;
 			
 			// Bar properties
@@ -106,8 +106,8 @@ namespace Monobjc.Samples.RangePlot
 			graph.DefaultPlotSpace.Delegate = this;
 			
 			// Store area fill for use later
-			CPColor transparentGreen = CPColor.GreenColor.ColorWithAlphaComponent (0.2);
-			areaFill = new CPFill (transparentGreen);
+			CPTColor transparentGreen = CPTColor.GreenColor.ColorWithAlphaComponent (0.2);
+			areaFill = new CPTFill (transparentGreen);
 			
 			// Add some data
 			NSMutableArray newData = new NSMutableArray();
@@ -122,12 +122,12 @@ namespace Monobjc.Samples.RangePlot
 				double rRight = (rand.Next () / (double)Int32.MaxValue * 0.125 + 0.125) * oneDay;
 				
 				newData.AddObject (NSDictionary.DictionaryWithObjectsAndKeys (
-				                                                              NSDecimalNumber.NumberWithDouble (xx), CPRangePlot.FieldX, 
-				                                                              NSDecimalNumber.NumberWithDouble (yy), CPRangePlot.FieldY,
-				                                                              NSDecimalNumber.NumberWithDouble (rHigh), CPRangePlot.FieldHigh, 
-				                                                              NSDecimalNumber.NumberWithDouble (rLow), CPRangePlot.FieldLow, 
-				                                                              NSDecimalNumber.NumberWithDouble (rLeft), CPRangePlot.FieldLeft,
-				                                                              NSDecimalNumber.NumberWithDouble (rRight), CPRangePlot.FieldRight, 
+				                                                              NSDecimalNumber.NumberWithDouble (xx), CPTRangePlot.FieldX, 
+				                                                              NSDecimalNumber.NumberWithDouble (yy), CPTRangePlot.FieldY,
+				                                                              NSDecimalNumber.NumberWithDouble (rHigh), CPTRangePlot.FieldHigh, 
+				                                                              NSDecimalNumber.NumberWithDouble (rLow), CPTRangePlot.FieldLow, 
+				                                                              NSDecimalNumber.NumberWithDouble (rLeft), CPTRangePlot.FieldLeft,
+				                                                              NSDecimalNumber.NumberWithDouble (rRight), CPTRangePlot.FieldRight, 
 				                                                              null));
 			}
 			
@@ -135,22 +135,22 @@ namespace Monobjc.Samples.RangePlot
 		}
 
 		[ObjectiveCMessage("numberForPlot:field:recordIndex:")]
-		public virtual NSNumber NumberForPlotFieldRecordIndex (CPPlot plot, NSUInteger fieldEnum, NSUInteger index)
+		public virtual NSNumber NumberForPlotFieldRecordIndex (CPTPlot plot, NSUInteger fieldEnum, NSUInteger index)
 		{
 			NSNumber num = plotData.ObjectAtIndex (index).CastTo<NSDictionary> ().ObjectForKey (NSNumber.NumberWithInt (fieldEnum)).CastTo<NSNumber> ();
 			return num;
 		}
 
 		[ObjectiveCMessage("numberOfRecordsForPlot:")]
-		public virtual NSUInteger NumberOfRecordsForPlot (CPPlot plot)
+		public virtual NSUInteger NumberOfRecordsForPlot (CPTPlot plot)
 		{
 			return this.plotData.Count;
 		}
 
 		[ObjectiveCMessage("plotSpace:shouldHandlePointingDeviceUpEvent:atPoint:")]
-		public virtual bool PlotSpaceShouldHandlePointingDeviceUpEventAtPoint (CPPlotSpace space, Id @event, CGPoint point)
+		public virtual bool PlotSpaceShouldHandlePointingDeviceUpEventAtPoint (CPTPlotSpace space, Id @event, CGPoint point)
 		{
-			CPRangePlot rangePlot = graph.PlotWithIdentifier(PLOT_IDENTIFIER).CastTo<CPRangePlot>();
+			CPTRangePlot rangePlot = graph.PlotWithIdentifier(PLOT_IDENTIFIER).CastTo<CPTRangePlot>();
 			rangePlot.AreaFill = ( rangePlot.AreaFill != null ? null : areaFill );
 			rangePlot.BarLineStyle = ( rangePlot.BarLineStyle != null ? null : barLineStyle );
 			return false;

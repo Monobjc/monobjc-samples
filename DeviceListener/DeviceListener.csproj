@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
-    <SigningIdentity />
+    <SigningIdentity>3rd Party Mac Developer Application: Laurent Etiemble</SigningIdentity>
     <ArchiveIdentity />
     <Archive>false</Archive>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>

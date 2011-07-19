@@ -17,10 +17,10 @@
     <EmbedMachineConfig>true</EmbedMachineConfig>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
-    <Archive>false</Archive>
+    <Archive>true</Archive>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
-    <SigningIdentity />
-    <ArchiveIdentity />
+    <SigningIdentity>3rd Party Mac Developer Application: Laurent Etiemble</SigningIdentity>
+    <ArchiveIdentity>3rd Party Mac Developer Installer: Laurent Etiemble</ArchiveIdentity>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

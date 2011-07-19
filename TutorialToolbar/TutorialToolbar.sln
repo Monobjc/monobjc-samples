@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TutorialToolbar", "TutorialToolbar.csproj", "{FC8DC498-BDFD-4A10-A1B8-D2D963A0AA4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC8DC498-BDFD-4A10-A1B8-D2D963A0AA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8DC498-BDFD-4A10-A1B8-D2D963A0AA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8DC498-BDFD-4A10-A1B8-D2D963A0AA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8DC498-BDFD-4A10-A1B8-D2D963A0AA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = TutorialToolbar.csproj
+	EndGlobalSection
+EndGlobal

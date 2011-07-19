@@ -1,0 +1,9 @@
+/*
+ * Localizable.strings file
+ *
+ * Insert your localized content as key/value pairs
+ */
+
+"$$Hello World" = "Hello World";
+"$$It speaks English" = "It speaks English";
+"$$OK" = "OK";

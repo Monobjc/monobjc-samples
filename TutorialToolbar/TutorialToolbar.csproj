@@ -3,21 +3,21 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{298612C9-40D0-45B8-A047-15AE54E18B8E}</ProjectGuid>
+    <ProjectGuid>{FC8DC498-BDFD-4A10-A1B8-D2D963A0AA4C}</ProjectGuid>
     <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GLFullScreen</RootNamespace>
+    <RootNamespace>TutorialToolbar</RootNamespace>
     <MacOSArch>X86</MacOSArch>
-    <Archive>true</Archive>
-    <MacOSFrameworks>AppKit;Foundation;OpenGL</MacOSFrameworks>
+    <Archive>false</Archive>
     <MacOSVersion>MacOS106</MacOSVersion>
-    <AssemblyName>GLFullScreen</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
-    <SigningIdentity>3rd Party Mac Developer Application: Laurent Etiemble</SigningIdentity>
-    <ArchiveIdentity>3rd Party Mac Developer Installer: Laurent Etiemble</ArchiveIdentity>
+    <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
+    <AssemblyName>TutorialToolbar</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
+    <BundleIcon>Monobjc.icns</BundleIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,19 +41,15 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.6.1416.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.6.1416.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.AppKit, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.6.1416.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
-    </Reference>
-    <Reference Include="Monobjc.OpenGL, Version=10.6.1416.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
       <Package>monobjc-10.6</Package>
     </Reference>
@@ -63,21 +59,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="MainController.cs" />
-    <Compile Include="MyOpenGLView.cs" />
-    <Compile Include="Scene.cs" />
-    <Compile Include="Texture.cs" />
-    <Compile Include="MainController.designer.cs">
-      <DependentUpon>MainController.cs</DependentUpon>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Page Include="en.lproj\MainMenu.xib" />
   </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Content Include="Earth.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Monobjc.icns" />
   </ItemGroup>
 </Project>

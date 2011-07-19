@@ -12,11 +12,12 @@
     <MacOSArch>X86</MacOSArch>
     <Archive>false</Archive>
     <MacOSFrameworks>AppKit;CorePlot;Foundation</MacOSFrameworks>
-    <MacOSVersion>MacOS105</MacOSVersion>
+    <MacOSVersion>MacOS106</MacOSVersion>
     <AssemblyName>RangePlot</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
+    <BundleIcon>CorePlotIcon.icns</BundleIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,21 +41,21 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1389.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
+      <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1389.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.AppKit, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
+      <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.CorePlot, Version=10.5.1389.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.CorePlot, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
+      <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1389.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+    <Reference Include="Monobjc.Foundation, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.5</Package>
+      <Package>monobjc-10.6</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -71,4 +72,7 @@
     <Page Include="en.lproj\MainMenu.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="CorePlotIcon.icns" />
+  </ItemGroup>
 </Project>
