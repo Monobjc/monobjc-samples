@@ -15,11 +15,16 @@
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <Archive>false</Archive>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
+    <SigningIdentity />
+    <ArchiveIdentity />
+    <AdditionalAssemblies />
+    <ExcludedAssemblies />
+    <AdditionalLibraries />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,16 +47,13 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monobjc, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monobjc.AppKit, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monobjc.Foundation, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.5</Package>
     </Reference>
   </ItemGroup>
@@ -72,6 +74,7 @@
     <None Include="Monobjc.icns" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Monobjc.CocoaApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -10,15 +10,20 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Monobjc.Samples.MiniBooth</RootNamespace>
     <AssemblyName>MiniBooth</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MacOSFrameworks>AppKit;Foundation;Quartz</MacOSFrameworks>
-    <MacOSVersion>MacOS106</MacOSVersion>
+    <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <Archive>false</Archive>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
+    <SigningIdentity />
+    <ArchiveIdentity />
+    <AdditionalAssemblies />
+    <ExcludedAssemblies />
+    <AdditionalLibraries />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,21 +45,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Monobjc, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc.AppKit, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc.Foundation, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Quartz, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc.Quartz, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +71,7 @@
     <None Include="Monobjc.icns" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Monobjc.CocoaApplication.targets" />
   <ItemGroup>
     <Page Include="English.lproj\MainMenu.xib" />
   </ItemGroup>

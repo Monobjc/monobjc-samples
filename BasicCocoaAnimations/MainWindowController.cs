@@ -69,7 +69,7 @@ namespace Monobjc.Samples.BasicCocoaAnimations
             NSAnimationContext.BeginGrouping();
 
             // With the shift key down, do slow-mo animation
-            if ((NSApplication.NSApp.CurrentEvent.ModifierFlags & NSModifierFlag.NSShiftKeyMask) == NSModifierFlag.NSShiftKeyMask)
+            if ((NSApplication.NSApp.CurrentEvent.ModifierFlags & NSModifierFlags.NSShiftKeyMask) == NSModifierFlags.NSShiftKeyMask)
             {
                 NSAnimationContext.CurrentContext.Duration = 1.0f;
             }

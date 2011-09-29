@@ -3,6 +3,7 @@ build/
 dist/
 obj/
 _ReSharper*
+.DS_Store
 *.Cache
 *.pidb
 *.resources

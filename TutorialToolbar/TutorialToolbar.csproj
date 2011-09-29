@@ -11,13 +11,18 @@
     <RootNamespace>TutorialToolbar</RootNamespace>
     <MacOSArch>X86</MacOSArch>
     <Archive>false</Archive>
-    <MacOSVersion>MacOS106</MacOSVersion>
+    <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
     <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
     <AssemblyName>TutorialToolbar</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
     <BundleIcon>Monobjc.icns</BundleIcon>
+    <SigningIdentity />
+    <ArchiveIdentity />
+    <AdditionalAssemblies />
+    <ExcludedAssemblies />
+    <AdditionalLibraries />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,17 +46,14 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc.AppKit, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.6.1479.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>monobjc-10.6</Package>
+    <Reference Include="Monobjc.Foundation, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Package>monobjc-10.5</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +70,7 @@
     <Page Include="en.lproj\MainMenu.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Monobjc.CocoaApplication.targets" />
   <ItemGroup>
     <Content Include="Monobjc.icns" />
   </ItemGroup>

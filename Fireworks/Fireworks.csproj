@@ -14,13 +14,18 @@
     <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
     <MacOSVersion>MacOS106</MacOSVersion>
     <AssemblyName>Fireworks</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
-    <Archive>true</Archive>
+    <Archive>false</Archive>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
-    <SigningIdentity>3rd Party Mac Developer Application: Laurent Etiemble</SigningIdentity>
-    <ArchiveIdentity>3rd Party Mac Developer Installer: Laurent Etiemble</ArchiveIdentity>
+    <SigningIdentity>
+    </SigningIdentity>
+    <ArchiveIdentity>
+    </ArchiveIdentity>
+    <AdditionalAssemblies />
+    <ExcludedAssemblies />
+    <AdditionalLibraries />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,20 +49,18 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monobjc, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monobjc.AppKit, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.6</Package>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.6.1329.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monobjc.Foundation, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.6</Package>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Monobjc.CocoaApplication.targets" />
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="AppController.cs" />
