@@ -61,8 +61,7 @@ namespace Monobjc.Samples.AnimatedCompositionLayer
             CATransaction.Begin();
             CATransaction.SetValueForKey(NSNumber.NumberWithFloat(1.0f), CATransaction.kCATransactionAnimationDuration);
             this.Layer.SetValueForKeyPath(NSNumber.NumberWithFloat(this.rand()), "patch.size.value");
-            Id rgb = new Id();
-            rgb.NativePointer = CGColor.CreateGenericRGB(this.rand(), this.rand(), this.rand(), 1.0f);
+            Id rgb = new Id(CGColor.CreateGenericRGB(this.rand(), this.rand(), this.rand(), 1.0f));
             this.Layer.SetValueForKeyPath(rgb, NSString.StringWithFormat("patch.%@.value", QCComposition.QCCompositionInputPrimaryColorKey));
             CATransaction.Commit();
         }

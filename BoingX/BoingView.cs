@@ -57,13 +57,13 @@ namespace Monobjc.Samples.BoingX
 		{
 			//uint[] attribsNice = new uint[] { (uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFAAccelerated, (uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFADoubleBuffer, (uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFADepthSize, 24, (uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFAAlphaSize, 8, (uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFAColorSize, 32, (uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFANoRecovery, (uint)CGLPixelFormatAttribute.kCGLPFASampleBuffers, 1, (uint)NSOpenGLPixelFormatAttribute.kCGLPFASamples, 2, 0 };
 			
-			Object[] attribsJaggy = new Object[] {
-				NSOpenGLPixelFormatAttribute.NSOpenGLPFAAccelerated, 
-				NSOpenGLPixelFormatAttribute.NSOpenGLPFADoubleBuffer, 
-				NSOpenGLPixelFormatAttribute.NSOpenGLPFADepthSize, 24, 
-				NSOpenGLPixelFormatAttribute.NSOpenGLPFAAlphaSize, 8, 
-				NSOpenGLPixelFormatAttribute.NSOpenGLPFAColorSize, 32,
-				NSOpenGLPixelFormatAttribute.NSOpenGLPFANoRecovery,
+			uint[] attribsJaggy = new uint[] {
+				(uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFAAccelerated, 
+				(uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFADoubleBuffer, 
+				(uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFADepthSize, 24, 
+				(uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFAAlphaSize, 8, 
+				(uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFAColorSize, 32,
+				(uint)NSOpenGLPixelFormatAttribute.NSOpenGLPFANoRecovery,
 				0 };
 			
 			NSOpenGLPixelFormat fmt = new NSOpenGLPixelFormat (attribsJaggy);
