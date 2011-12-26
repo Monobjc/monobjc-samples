@@ -15,7 +15,6 @@
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <Archive>false</Archive>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
@@ -67,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="blueLetter.tif" />
+    <Content Include="Monobjc.icns" />
   </ItemGroup>
   <ItemGroup>
     <None Include="English.lproj\InfoPlist.strings">
@@ -78,7 +78,6 @@
     <None Include="Info.plist">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Monobjc.icns" />
     <None Include="English.lproj\MainMenu.nib~\classes.nib" />
     <None Include="English.lproj\MainMenu.nib~\info.nib" />
     <None Include="English.lproj\MainMenu.nib~\objects.nib" />

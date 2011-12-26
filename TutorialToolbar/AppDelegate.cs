@@ -103,17 +103,20 @@ namespace TutorialToolbar
 		{
 			return true;
 		}
-
+		
+		[IBAction]
 		[ObjectiveCMessage("doSomething1:")]
 		public void DoSomething1 (Id sender)
 		{
 		}
 
+		[IBAction]
 		[ObjectiveCMessage("doSomething2:")]
 		public void DoSomething2 (Id sender)
 		{
 		}
 
+		[IBAction]
 		[ObjectiveCMessage("doSomething3:")]
 		public void DoSomething3 (Id sender)
 		{

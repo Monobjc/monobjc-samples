@@ -9,13 +9,12 @@
     <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Monobjc.Samples.SimpleWebBrowser</RootNamespace>
-    <AssemblyName>SimpleWebBrowser</AssemblyName>
+    <RootNamespace>Monobjc.Samples.BackgroundWorker</RootNamespace>
+    <AssemblyName>BackgroundWorker</AssemblyName>
     <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <Archive>false</Archive>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
@@ -49,12 +48,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="Monobjc, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.5</Package>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Monobjc.AppKit, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.5</Package>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Monobjc.Foundation, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.5</Package>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

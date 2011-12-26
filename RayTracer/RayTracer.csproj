@@ -10,8 +10,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Monobjc.Samples.RayTracer</RootNamespace>
-    <AssemblyName>Monobjc.Samples.RayTracer</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AssemblyName>RayTracer</AssemblyName>
     <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
