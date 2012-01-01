@@ -15,7 +15,6 @@
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
     <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
     <AssemblyName>DraggingAndWindowResize</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <SigningIdentity />

@@ -10,7 +10,6 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Monobjc.Samples.AnimatedCompositionLayer</RootNamespace>
     <AssemblyName>AnimatedCompositionLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MacOSFrameworks>AppKit;Foundation;Quartz</MacOSFrameworks>
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>

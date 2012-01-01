@@ -3,7 +3,7 @@ using Monobjc;
 using Monobjc.AppKit;
 using Monobjc.Foundation;
 
-namespace TutorialI18N
+namespace Monobjc.Samples.TutorialI18N
 {
     [ObjectiveCClass]
 	public partial class AppDelegate : NSObject, INSNibAwaking

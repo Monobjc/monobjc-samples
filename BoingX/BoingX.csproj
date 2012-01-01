@@ -14,7 +14,6 @@
     <MacOSFrameworks>AppKit;Foundation;OpenGL</MacOSFrameworks>
     <MacOSVersion>MacOS106</MacOSVersion>
     <AssemblyName>BoingX</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
     <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
     <SigningIdentity />

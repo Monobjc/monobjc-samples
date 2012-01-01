@@ -15,7 +15,6 @@
     <MacOSVersion>MacOS106</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>false</EmbedMachineConfig>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <MainNibFile>English.lproj\MainMenu.xib</MainNibFile>
     <SigningIdentity>
@@ -47,8 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-    </Reference>
+    <Reference Include="System.Core" />
     <Reference Include="Monobjc, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Package>monobjc-10.6</Package>
     </Reference>

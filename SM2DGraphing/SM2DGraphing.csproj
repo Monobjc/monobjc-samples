@@ -11,7 +11,6 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Monobjc.Samples.SM2DGraphing</RootNamespace>
     <AssemblyName>SM2DGraphing</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MacOSFrameworks>AppKit;Foundation;SM2DGraphView</MacOSFrameworks>
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>

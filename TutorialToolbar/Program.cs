@@ -3,7 +3,7 @@ using Monobjc;
 using Monobjc.AppKit;
 using Monobjc.Foundation;
 
-namespace TutorialToolbar
+namespace Monobjc.Samples.TutorialToolbar
 {
 	internal class Program
 	{

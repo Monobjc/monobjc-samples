@@ -5,27 +5,27 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>QuartzComposerSlideShow</string>
-	<key>CFBundleHelpBookFolder</key>
-	<string>QuartzComposerSlideShow Help Folder</string>
-	<key>CFBundleHelpBookName</key>
-	<string>QuartzComposerSlideShow Help</string>
+	<string>${CFBundleExecutable}</string>
 	<key>CFBundleIconFile</key>
-	<string>Monobjc</string>
+	<string>${CFBundleIconFile}</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.monobjc.samples.QuartzComposerSlideShow</string>
+	<string>${CFBundleIdentifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>QuartzComposerSlideShow</string>
+	<string>${CFBundleName}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>${LSMinimumSystemVersion}</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>${NSMainNibFile}</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

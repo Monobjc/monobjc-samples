@@ -20,7 +20,6 @@
     <AdditionalAssemblies />
     <ExcludedAssemblies />
     <AdditionalLibraries />
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -32,6 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <Commandlineparameters>/Users/laurent/Projects/GitHub/monobjc/samples/TutorialConsole/bin/Debug/TutorialConsole.exe</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildBinPath)\Monobjc.ConsoleApplication.targets" />
@@ -61,5 +62,8 @@
     <Content Include="Monobjc.icns">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

@@ -8,14 +8,13 @@
     <ProjectGuid>{6E54B846-4D01-485E-AADE-78704125A4DC}</ProjectGuid>
     <ProjectTypeGuids>{804445EB-57E1-4F64-8830-61A8701F1C25};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TutorialI18N</RootNamespace>
+    <RootNamespace>Monobjc.Samples.TutorialI18N</RootNamespace>
     <MacOSArch>X86</MacOSArch>
     <Archive>false</Archive>
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSApplicationType>CocoaApplication</MacOSApplicationType>
     <MacOSFrameworks>AppKit;Foundation</MacOSFrameworks>
     <AssemblyName>TutorialI18N</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MainNibFile>en.lproj\MainMenu.xib</MainNibFile>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <SigningIdentity />
@@ -62,6 +61,7 @@
     <Compile Include="AppDelegate.designer.cs">
       <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="en.lproj\MainMenu.xib" />
@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fr.lproj\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

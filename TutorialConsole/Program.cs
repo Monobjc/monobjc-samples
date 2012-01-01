@@ -2,7 +2,7 @@ using System;
 using Monobjc;
 using Monobjc.Foundation;
 
-namespace TutorialConsole
+namespace Monobjc.Samples.TutorialConsole
 {
 	internal class Program
 	{

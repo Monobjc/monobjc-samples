@@ -1,10 +1,12 @@
 using System;
+using Monobjc;
 using Monobjc.AppKit;
+using Monobjc.Foundation;
 
-namespace Monobjc.Samples.QuartzComposerSlideShow
+namespace Monobjc.Samples.TutorialMacAppStore
 {
-    internal class Program
-    {
+	internal class Program
+	{
 		private static void Main (String[] args)
 		{
 			#region --- Monobjc Generated Code ---
@@ -13,14 +15,17 @@ namespace Monobjc.Samples.QuartzComposerSlideShow
 			//
 			ObjectiveCRuntime.LoadFramework("AppKit");
 			ObjectiveCRuntime.LoadFramework("Foundation");
-			ObjectiveCRuntime.LoadFramework("Quartz");
+			ObjectiveCRuntime.LoadFramework("StoreKit");
 			#endregion
 			
 			ObjectiveCRuntime.Initialize ();
+
+			// Check the receipt
+			ReceiptChecker.Check();
 			
 			NSApplication.Bootstrap ();
 			NSApplication.LoadNib ("MainMenu.nib");
 			NSApplication.RunApplication ();
 		}
-    }
+	}
 }

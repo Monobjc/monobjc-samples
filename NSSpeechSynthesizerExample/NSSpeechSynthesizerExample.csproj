@@ -15,7 +15,6 @@
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <SigningIdentity>3rd Party Mac Developer Application: Laurent Etiemble</SigningIdentity>
     <ArchiveIdentity>3rd Party Mac Developer Installer: Laurent Etiemble</ArchiveIdentity>

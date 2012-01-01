@@ -15,7 +15,6 @@
     <MacOSVersion>MacOS105</MacOSVersion>
     <MacOSArch>X86</MacOSArch>
     <EmbedMachineConfig>true</EmbedMachineConfig>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BundleIcon>Monobjc.icns</BundleIcon>
     <SigningIdentity />
     <ArchiveIdentity />

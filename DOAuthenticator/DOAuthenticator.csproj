@@ -14,7 +14,6 @@
     <MacOSFrameworks>Foundation</MacOSFrameworks>
     <MacOSVersion>MacOS105</MacOSVersion>
     <AssemblyName>Authenticator</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MacOSApplicationType>ConsoleApplication</MacOSApplicationType>
     <SigningIdentity />
     <ArchiveIdentity />
