@@ -1,4 +1,4 @@
 /* Localized versions of Info.plist keys */
 
-CFBundleGetInfoString = "SimpleCocoaApp, Copyright 2007-2011 Monobjc Project.";
-NSHumanReadableCopyright = "Copyright 2007-2011 Monobjc Project.";
+CFBundleGetInfoString = "SimpleCocoaApp, Copyright 2007-2012 Monobjc Project.";
+NSHumanReadableCopyright = "Copyright 2007-2012 Monobjc Project.";

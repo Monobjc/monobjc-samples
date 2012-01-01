@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Monobjc Bridge Sample Application")]
 [assembly: AssemblyCompany("Monobjc Project")]
 [assembly: AssemblyProduct("Monobjc Bridge Project")]
-[assembly: AssemblyCopyright("Copyright © Monobjc Project 2007-2011")]
+[assembly: AssemblyCopyright("Copyright (c) Monobjc Project 2007-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en-US")]
