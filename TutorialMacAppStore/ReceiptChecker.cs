@@ -58,16 +58,9 @@ namespace Monobjc.Samples.TutorialMacAppStore
 			}
 			
 			Receipt receipt = DecodeReceipt (path);
-			
 			CheckReceiptIdentifier (receipt);
 			CheckReceiptVersion (receipt);
-			
 			CheckReceiptHash (receipt);
-		}
-		
-		internal static void CheckInApp ()
-		{
-			// TODO
 		}
 		
 		/// <summary>

@@ -19,7 +19,6 @@
     <BundleIcon>Monobjc.icns</BundleIcon>
     <SigningIdentity>3rd Party Mac Developer Application: Laurent Etiemble</SigningIdentity>
     <ArchiveIdentity />
-    <EmbeddedFrameworks />
     <AdditionalAssemblies />
     <ExcludedAssemblies />
     <AdditionalLibraries />
@@ -67,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
