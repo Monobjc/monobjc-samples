@@ -32,7 +32,8 @@ namespace Monobjc.Samples.TutorialMacAppStore
 				SKPaymentQueue.DefaultQueue.AddTransactionObserver(this);
 			}
 			
-			this.RequestProducts();
+			// Uncomment to enable product retrieval
+			//this.RequestProducts();
 		}
 
 		[ObjectiveCMessage ("applicationShouldTerminateAfterLastWindowClosed:")]
@@ -44,25 +45,26 @@ namespace Monobjc.Samples.TutorialMacAppStore
 		[ObjectiveCMessage ("paymentQueue:removedTransactions:")]
 		public virtual void PaymentQueueRemovedTransactions (SKPaymentQueue queue, NSArray transactions)
 		{
+			// TODO
 		}
 
 		[ObjectiveCMessage ("paymentQueue:restoreCompletedTransactionsFailedWithError:")]
 		public virtual void PaymentQueueRestoreCompletedTransactionsFailedWithError (SKPaymentQueue queue, NSError error)
 		{
+			// TODO
 		}
 
 		[ObjectiveCMessage ("paymentQueueRestoreCompletedTransactionsFinished:")]
 		public virtual void PaymentQueueRestoreCompletedTransactionsFinished (SKPaymentQueue queue)
 		{
+			// TODO
 		}
 
 		[ObjectiveCMessage ("paymentQueue:updatedTransactions:")]
 		public virtual void PaymentQueueUpdatedTransactions (SKPaymentQueue queue, NSArray transactions)
 		{
+			// TODO
 		}
-		
-		
-		
 		
 		[ObjectiveCMessage ("productsRequest:didReceiveResponse:")]
 		public virtual void ProductsRequestDidReceiveResponse (SKProductsRequest request, SKProductsResponse response)
@@ -80,11 +82,10 @@ namespace Monobjc.Samples.TutorialMacAppStore
 			request.Autorelease();
 		}
 		
-		
-		
 		private void RequestProducts()
 		{
-			SKProductsRequest request = new SKProductsRequest(NSSet.SetWithObjects((NSString)"RECEIGEN_CONSUMABLE", (NSString)"RECEIGEN_NON_CONSUMABLE", null));
+			// List all the products to retrieve
+			SKProductsRequest request = new SKProductsRequest(NSSet.SetWithObjects((NSString)"CONSUMABLE", (NSString)"NON_CONSUMABLE", null));
 			request.Delegate = this;
 			request.Start();
 		}
