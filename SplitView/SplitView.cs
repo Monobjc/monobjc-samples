@@ -195,9 +195,9 @@ namespace SplitView
 			this.UpdateHeightConstraints ();
 		}
 		
-		public int dividerIndexForPoint (NSPoint point)
+		public NSInteger dividerIndexForPoint (NSPoint point)
 		{
-			int dividerIndex = -1;
+			NSInteger dividerIndex = -1;
 			Action<Id, NSUInteger, IntPtr > enumerator = delegate(Id id, NSUInteger i, IntPtr stop) {
 				NSView view = id.CastTo<NSView> ();
 				NSRect subviewFrame = view.Frame;

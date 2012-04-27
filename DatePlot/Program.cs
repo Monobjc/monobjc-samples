@@ -26,4 +26,3 @@ namespace Monobjc.Samples.DatePlot
 		}
 	}
 }
-

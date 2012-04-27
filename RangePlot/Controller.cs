@@ -137,7 +137,7 @@ namespace Monobjc.Samples.RangePlot
 		[ObjectiveCMessage("numberForPlot:field:recordIndex:")]
 		public virtual NSNumber NumberForPlotFieldRecordIndex (CPTPlot plot, NSUInteger fieldEnum, NSUInteger index)
 		{
-			NSNumber num = plotData.ObjectAtIndex (index).CastTo<NSDictionary> ().ObjectForKey (NSNumber.NumberWithInt (fieldEnum)).CastTo<NSNumber> ();
+			NSNumber num = plotData.ObjectAtIndex<NSDictionary>(index).ObjectForKey<NSNumber>(NSNumber.NumberWithUnsignedInteger (fieldEnum));
 			return num;
 		}
 
