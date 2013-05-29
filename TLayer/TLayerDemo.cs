@@ -35,7 +35,7 @@ namespace Monobjc.Samples.TLayer
                 return null;
             }
 
-            if (!NSBundle.LoadNibNamedOwner("TLayerDemo", this))
+            if (!NSBundle_AppKitAdditions.LoadNibNamedOwner("TLayerDemo", this))
             {
                 Console.WriteLine("Failed to load TLayerDemo.nib");
                 this.Release();

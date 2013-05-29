@@ -50,7 +50,7 @@ namespace Monobjc.Samples.RangePlot
 			graph = new CPTXYGraph (CGRect.CGRectZero);
 			CPTTheme theme = CPTTheme.ThemeNamed (CPTTheme.kCPTDarkGradientTheme);
 			graph.ApplyTheme (theme);
-			hostView.HostedLayer = graph;
+			hostView.HostedGraph = graph;
 			
 			// Title
 			CPTMutableTextStyle textStyle = CPTMutableTextStyle.TextStyle;

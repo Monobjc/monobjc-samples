@@ -46,7 +46,7 @@ namespace Monobjc.Samples.DatePlot
 			graph = new CPTXYGraph (CGRect.CGRectZero);
 			CPTTheme theme = CPTTheme.ThemeNamed (CPTTheme.kCPTDarkGradientTheme);
 			graph.ApplyTheme (theme);
-			hostView.HostedLayer = graph;
+			hostView.HostedGraph = graph;
 			
 			// Setup scatter plot space
 			CPTXYPlotSpace plotSpace = graph.DefaultPlotSpace.CastTo<CPTXYPlotSpace> ();
