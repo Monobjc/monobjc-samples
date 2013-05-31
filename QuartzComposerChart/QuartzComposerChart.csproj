@@ -23,6 +23,16 @@
     <AdditionalAssemblies />
     <ExcludedAssemblies />
     <AdditionalLibraries />
+    <MacOSDevelopmentRegion>English</MacOSDevelopmentRegion>
+    <CombineArtwork>false</CombineArtwork>
+    <EncryptionSeed />
+    <EmbeddedFrameworks />
+    <MacOSApplicationCategory />
+    <BundleId>net.monobjc.application.Test</BundleId>
+    <BundleVersion>1.0</BundleVersion>
+    <Signing>false</Signing>
+    <UseEntitlements>false</UseEntitlements>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,20 +54,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Monobjc, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc.AppKit, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc.Foundation, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Monobjc.Quartz, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc.Quartz, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -75,11 +81,11 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildBinPath)\Monobjc.CocoaApplication.targets" />
   <ItemGroup>
-    <Page Include="English.lproj\MainMenu.xib" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Chart.qtz" />
     <Content Include="English.lproj\InfoPlist.strings" />
     <Content Include="Monobjc.icns" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="English.lproj\MainMenu.xib" />
   </ItemGroup>
 </Project>

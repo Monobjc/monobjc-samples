@@ -26,6 +26,16 @@
     <AdditionalAssemblies />
     <ExcludedAssemblies />
     <AdditionalLibraries />
+    <MacOSDevelopmentRegion>English</MacOSDevelopmentRegion>
+    <CombineArtwork>false</CombineArtwork>
+    <EncryptionSeed />
+    <EmbeddedFrameworks />
+    <MacOSApplicationCategory />
+    <BundleId>net.monobjc.application.Test</BundleId>
+    <BundleVersion>1.0</BundleVersion>
+    <Signing>false</Signing>
+    <UseEntitlements>false</UseEntitlements>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,13 +58,13 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Monobjc, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.6</Package>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Monobjc.AppKit, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.6</Package>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Monobjc.Foundation, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.6</Package>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +96,6 @@
     <Content Include="Monobjc.icns" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="English.lproj\MainMenu.xib" />
+    <InterfaceDefinition Include="English.lproj\MainMenu.xib" />
   </ItemGroup>
 </Project>

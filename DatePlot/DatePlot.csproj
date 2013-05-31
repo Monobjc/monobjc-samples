@@ -22,6 +22,15 @@
     <AdditionalAssemblies />
     <ExcludedAssemblies />
     <AdditionalLibraries />
+    <CombineArtwork>false</CombineArtwork>
+    <EncryptionSeed />
+    <EmbeddedFrameworks />
+    <MacOSApplicationCategory />
+    <BundleId>net.monobjc.application.Test</BundleId>
+    <BundleVersion>1.0</BundleVersion>
+    <Signing>false</Signing>
+    <UseEntitlements>false</UseEntitlements>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,17 +54,17 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="Monobjc, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Monobjc.AppKit, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc.AppKit, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Monobjc.CorePlot, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc.CorePlot, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Private>False</Private>
     </Reference>
-    <Reference Include="Monobjc.Foundation, Version=10.5.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
-      <Package>monobjc-10.5</Package>
+    <Reference Include="Monobjc.Foundation, Version=10.6.0.0, Culture=neutral, PublicKeyToken=d5a8d181860c16be">
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -68,12 +77,12 @@
     </Compile>
     <Compile Include="Controller.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Page Include="en.lproj\MainMenu.xib" />
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildBinPath)\Monobjc.CocoaApplication.targets" />
   <ItemGroup>
     <Content Include="CorePlotIcon.icns" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="en.lproj\MainMenu.xib" />
   </ItemGroup>
 </Project>
